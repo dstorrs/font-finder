@@ -23,18 +23,18 @@ The following are the standard locations for fonts based on your OS:
 
 Fonts are identified based on their extension.  Expected extensions are:
 
-  TrueType: .ttf, .ttc
-  OpenType: .ttf, .otf
-  PT1     : .pfm, .pfb
+ * TrueType: .ttf, .ttc
+ * OpenType: .ttf, .otf
+ * PT1     : .pfm, .pfb
 
 See the Warnings section below.
 
 # Interface
 
- `(known-fonts)`             : Returns a list of all font files it can find
- `(populate-known-fonts)`    : Re-scans the disk to refresh the value returned by `(known-fonts)`
- `(system-font-folders)`     : Returns the list of system folders that will be searched for fonts.
- `(macos-user-font-folders)` : Returns the list of /Users/{name}/Library/Fonts directories that exist on this Mac.
+ * `(known-fonts)`             : Returns a list of all font files it can find
+ * `(populate-known-fonts)`    : Re-scans the disk to refresh the value returned by `(known-fonts)`
+ * `(system-font-folders)`     : Returns the list of system folders that will be searched for fonts.
+ * `(macos-user-font-folders)` : Returns the list of /Users/{name}/Library/Fonts directories that exist on this Mac.
 
 Note:  You don't need to explicitly call `populate-known-fonts`, since `known-fonts` will take care of that if it has not been done yet.  After `populate-known-fonts` is called, the list will be cached and future calls to `known-fonts` will return the cached copy without re-checking the disk.  You may call `populate-known-fonts` in order to refresh the list (e.g. if you install more fonts).
 
